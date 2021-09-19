@@ -1,34 +1,34 @@
 import { useState } from "react";
 import { getCurrentWeather } from "../services/OpenWeatherMapAPIService";
 import "./Landing.css";
+import WeatherItem from "./WeatherItem";
 
 const Landing = () => {
-  // const [long, setLong] = useState<number | undefined>(undefined);
-  // const [lat, setLat] = useState<number | undefined>(undefined);
-  const [weather, setWeather] = useState<any>();
+  const [weather, setWeather] = useState<any>(undefined);
 
   const getWeather = () => {
-    let success = async (position: any) => {
+    const success = async (position: any) => {
       let longitude = await position.coords.longitude;
       let latitude = await position.coords.latitude;
-      console.log(longitude, latitude);
       getCurrentWeather(longitude, latitude).then((data) => {
-        console.log(data);
+        setWeather(data);
       });
     };
-    let error = () => {
+    const error = () => {
       console.log("Error");
     };
     navigator.geolocation.getCurrentPosition(success, error);
   };
 
-  const handleClick = () => {
-    getWeather();
-  };
-
   return (
     <div className="Landing">
-      <button onClick={handleClick}>Get local weather</button>
+      {!weather ? (
+        <button onClick={getWeather}>Get local weather</button>
+      ) : (
+        <ul>
+          <WeatherItem weather={weather} />
+        </ul>
+      )}
     </div>
   );
 };

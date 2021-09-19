@@ -1,7 +1,11 @@
 import "./FiveDayTemp.css";
 
 const FiveDayTemp = () => {
-  return <div className="FiveDayTemp">FiveDayTemp works</div>;
+  return (
+    <div className="FiveDayTemp">
+      <button>get your five day forecast</button>
+    </div>
+  );
 };
 
 export default FiveDayTemp;

@@ -14,9 +14,9 @@ export const getCurrentWeather = async (
         units: "imperial",
         lon,
         lat,
-        appid: appid,
+        appid,
       },
     }
   );
-  return response.data;
+  return response.data.list[0];
 };

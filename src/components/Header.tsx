@@ -11,12 +11,12 @@ const Header = () => {
         <ul>
           <li>
             <Link to="/">
-              <h2>Current Local Weather</h2>
+              <h2>current local</h2>
             </Link>
           </li>
           <li>
             <Link to="/fivedaytemp">
-              <h2>Five Day Local Forecast</h2>
+              <h2>five day local forecast</h2>
             </Link>
           </li>
         </ul>
