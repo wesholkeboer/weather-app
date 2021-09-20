@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
+import Weather from "../models/Weather";
 import WeatherItem from "./WeatherItem";
 
-const weather1 = {
+const mockWeather: Weather = {
   name: "Toledo",
   main: {
     temp: 65,
@@ -11,16 +12,18 @@ const weather1 = {
     temp_max: 70,
     humidity: 78,
   },
-  weather: {
-    main: "Cloudy",
-    description: "pretty cloudy",
-  },
+  weather: [
+    {
+      main: "Cloudy",
+      description: "pretty cloudy",
+    },
+  ],
 };
 
 test("WeatherItem renders the city name, temperature, and weather description if available", () => {
   render(
     <Router>
-      <WeatherItem weather={weather1} />
+      <WeatherItem weather={mockWeather} />
     </Router>
   );
   const city = screen.getByText(/Toledo/i);

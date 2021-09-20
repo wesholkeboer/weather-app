@@ -4,13 +4,13 @@ import "./Landing.css";
 import WeatherItem from "./WeatherItem";
 
 const Landing = () => {
-  const [weather, setWeather] = useState<any>(undefined);
+  const [weather, setWeather] = useState<any>();
 
   const getWeather = () => {
     const success = async (position: any) => {
-      let longitude = await position.coords.longitude;
-      let latitude = await position.coords.latitude;
-      getCurrentWeather(longitude, latitude).then((data) => {
+      let lon = await position.coords.longitude;
+      let lat = await position.coords.latitude;
+      getCurrentWeather(lon, lat).then((data) => {
         setWeather(data);
       });
     };

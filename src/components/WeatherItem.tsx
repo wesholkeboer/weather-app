@@ -15,8 +15,8 @@ const WeatherItem = ({ weather }: Props) => {
       </p>
       <p>feels like: {weather.main.feels_like}</p>
       <p>humidity: {weather.main.humidity}</p>
-      <h4>{weather.weather.main}</h4>
-      <p>{weather.weather.description}</p>
+      <h4>{weather.weather[0].main}</h4>
+      <p>{weather.weather[0].description}</p>
     </li>
   );
 };

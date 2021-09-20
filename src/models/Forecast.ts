@@ -1,5 +1,5 @@
-export default interface Weather {
-  name: string;
+export default interface Forecast {
+  dt: number;
   main: {
     temp: number;
     feels_like: number;
@@ -11,6 +11,7 @@ export default interface Weather {
     {
       main: string;
       description: string;
+      icon: string;
     }
   ];
 }
