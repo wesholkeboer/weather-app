@@ -1,0 +1,37 @@
+.WeatherItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  color: #3d3d3d;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px #822eff dashed;
+}
+
+.WeatherItem .weatherIcon {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  align-self: center;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.WeatherItem .weatherText {
+  flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .WeatherItem {
+    flex-direction: row;
+  }
+}

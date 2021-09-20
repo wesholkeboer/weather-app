@@ -16,6 +16,7 @@ const mockWeather: Weather = {
     {
       main: "Cloudy",
       description: "pretty cloudy",
+      icon: "40B",
     },
   ],
 };

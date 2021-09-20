@@ -1,0 +1,15 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  font-family: "Koh Santepheap", cursive;
+  border-bottom: 2px #822eff dashed;
+}
+
+@media only screen and (min-width: 768px) {
+  .Header {
+    flex-direction: row;
+  }
+}

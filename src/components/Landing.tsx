@@ -15,7 +15,7 @@ const Landing = () => {
       });
     };
     const error = () => {
-      console.log("Error");
+      console.log("An error occurred in fetching geolocation.");
     };
     navigator.geolocation.getCurrentPosition(success, error);
   };
@@ -23,11 +23,11 @@ const Landing = () => {
   return (
     <div className="Landing">
       {!weather ? (
-        <button onClick={getWeather}>Get local weather</button>
+        <button className="weatherBtn" onClick={getWeather}>
+          get local weather
+        </button>
       ) : (
-        <ul>
-          <WeatherItem weather={weather} />
-        </ul>
+        <WeatherItem weather={weather} />
       )}
     </div>
   );

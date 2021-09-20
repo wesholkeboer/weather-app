@@ -1,13 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fffdd6;
+  font-family: "Arimo", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover {
+  color: #822eff;
+}
+
+.weatherBtn {
+  background-color: #822eff;
+  color: white;
+  border-radius: 10px;
+  border: 2px #822eff solid;
+  padding: 30px;
+  font-family: "Arimo", sans-serif;
+  font-size: larger;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.weatherBtn:hover {
+  background-color: white;
+  color: #822eff;
 }

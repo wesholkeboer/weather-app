@@ -1,0 +1,15 @@
+.FiveDayTemp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: grey;
+  font-size: larger;
+}
+
+.FiveDayTemp .cityHeader {
+  padding: 15px;
+}
+
+.FiveDayTemp .cityName {
+  color: #822eff;
+}

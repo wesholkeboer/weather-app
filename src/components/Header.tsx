@@ -11,7 +11,7 @@ const Header = () => {
         <ul>
           <li>
             <Link to="/">
-              <h2>current local</h2>
+              <h2>current local weather</h2>
             </Link>
           </li>
           <li>

@@ -16,7 +16,7 @@ const FiveDayTemp = () => {
       });
     };
     const error = () => {
-      console.log("Error");
+      console.log("An error occurred in fetching geolocation.");
     };
     navigator.geolocation.getCurrentPosition(success, error);
   };
@@ -28,10 +28,15 @@ const FiveDayTemp = () => {
   return (
     <div className="FiveDayTemp">
       {!forecasts ? (
-        <button onClick={handleClick}>get your five day forecast</button>
+        <button className="weatherBtn" onClick={handleClick}>
+          get your five day forecast
+        </button>
       ) : (
         <div>
-          <h4>upcoming weather for {forecasts.city.name}</h4>
+          <h4 className="cityHeader">
+            upcoming weather for{" "}
+            <span className="cityName">{forecasts.city.name}</span>
+          </h4>
           <ul>
             {forecasts.list.map((forecast) => {
               return <ForecastItem forecast={forecast} key={forecast.dt} />;
